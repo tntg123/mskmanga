@@ -62,7 +62,7 @@ $('.bookmark').each(function(event) {
 const getData = JSON.parse(localStorage.getItem('bookmark'));
 for(var i in getData){
 	if(getData[i].id == $(this).data('id')){
-     $(this).html('Đã theo dõi')
+     $(this).html('<svg viewBox="0 0 24 24"><path fill="currentColor" d="M17,3H7A2,2 0 0,0 5,5V21L12,18L19,21V5C19,3.89 18.1,3 17,3Z"></path></svg> Đã theo dõi')
      $(this).addClass('bookmarked')
     }
 }
@@ -81,10 +81,10 @@ if(list == null){
   if(!$(this).hasClass('bookmarked')){
     	bookmark.addItemTobookmark(id,name,status,type,link,img);
   		$(this).addClass('bookmarked')
-  		$(this).html('Đã theo dõi')
+  		$(this).html('<svg viewBox="0 0 24 24"><path fill="currentColor" d="M17,3H7A2,2 0 0,0 5,5V21L12,18L19,21V5C19,3.89 18.1,3 17,3Z"></path></svg> Đã theo dõi')
   }else{
   	bookmark.removeThisItem(id);
-  	$(this).html('Theo dõi')
+  	$(this).html('<svg viewBox="0 0 24 24"><path fill="currentColor" d="M17,18L12,15.82L7,18V5H17M17,3H7A2,2 0 0,0 5,5V21L12,18L19,21V5C19,3.89 18.1,3 17,3Z"></path></svg> Theo dõi')
   	$(this).removeClass('bookmarked')
   }
 }else{
@@ -92,11 +92,11 @@ if(list == null){
 if(list.length<limitBookmark){
     	bookmark.addItemTobookmark(id,name,status,type,link,img);
   		$(this).addClass('bookmarked')
-  		$(this).html('Đã theo dõi')
+  		$(this).html('<svg viewBox="0 0 24 24"><path fill="currentColor" d="M17,3H7A2,2 0 0,0 5,5V21L12,18L19,21V5C19,3.89 18.1,3 17,3Z"></path></svg> Đã theo dõi')
 }
   }else{
   	bookmark.removeThisItem(id);
-  	$(this).html('Theo dõi')
+  	$(this).html('<svg viewBox="0 0 24 24"><path fill="currentColor" d="M17,18L12,15.82L7,18V5H17M17,3H7A2,2 0 0,0 5,5V21L12,18L19,21V5C19,3.89 18.1,3 17,3Z"></path></svg> Theo dõi')
   	$(this).removeClass('bookmarked')
   }
 }
